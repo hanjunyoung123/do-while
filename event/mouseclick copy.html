@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭이벤트 예제</title>
+</head>
+<body>
+    <button class="bt">클릭하세요</button>
+    <p class="displayTxt"></p>
+    <!-- 다른 버튼 만들기 -->
+    <!-- 1버튼을 만든다 -->
+    <!-- 2.내용담을p태그를만든다 -->
+    <button class="btOne">버튼</button>
+    <p class="btP"></p>
+    <script>
+      // 1.버튼을 변수에 저장  querySelector:요소를 선택 ex:class id... / getElementById:아이디를 추가할때
+    var button = document.querySelector(".bt");
+    var displayTxt = document.querySelector(".displayTxt");
+      // 2.저장한 변수에 클릭했을때 행동
+
+      //*************** 변수(button).onclick(클릭했을때) = function(행동해라){alert(확인창)}**************
+    
+    button.onclick = function () {
+        // alert(`안녕하세요`)
+        // document.write("안녕하세요");
+        displayTxt.innerHTML = `안녕하세요`;
+    };
+
+    //   다른버튼클릭이벤트
+    var btOne = document.querySelector(".btOne")
+    var btP = document.querySelector(".btP")
+    btOne.onclick = function(){
+    btP.innerHTML = `한준영` // 괄호가없을시`출력해야할 내용`
+    }
+
+    </script>
+</body>
+</html>
