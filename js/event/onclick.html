@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick 글자색바꾸기</title>
+    <style>
+        .colorChange{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnColor">글자색 바뀌기</button>
+    <p class="txtP">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem esse aliquam quis exercitationem, vero dicta nostrum quae libero.
+        Rem quas atque totam, odit neque et similique quasi fugit omnis ut?</p>
+    <script>
+        // function changeTxtColor(){
+        //     const txtColor = document.querySelector(".txtP")
+        //     txtColor.classList.toggle("colorChange")
+        // }
+
+        // 랜덤으로 글자색 바꾸기
+        const btnColor = document.querySelector("#btnColor")
+        btnColor.addEventListener("click", function(){
+            const txtColor = document.querySelector(".txtP");
+            const colors = ["red","blue","green","pink","skyblue","yellow"]
+            // Math.floor() - 0과1사이에서 무작위 소수를 변화한다.
+            // Math.floor() - 소수점 이하를 버리고 가장 가까운 정수로 내림합니다.
+            const randomIntex = Math.floor(Math.random()*colors.length)
+            // console.log(color)
+            // console.log(Math.floor(Math.random()*colors.length))
+            const randomColor = colors[randomIntex]
+            console.log(randomColor)
+            txtColor.style.color = randomColor
+        });
+    </script>
+</body>
+</html>

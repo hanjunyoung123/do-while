@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 공지</title>
+    <style>
+        #container{
+            width: 30%;
+        }
+        #container img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>이벤트 공지</h1>
+        <img src="../event/images/flower.jfif" alt="이미지">
+        <p>
+            <a href="#" id="detailLink" data-url="click.html">자세히보기</a>
+        </p>
+    </div>
+    <script>
+        const link = document.querySelectorAll("#detail-link")
+        link.forEach(function(link){
+            // console.log(link);
+            link.addEventListener("click",function(){
+                detailLink(this.getAttribute(""))
+            })
+        })
+        function detailLink(url){
+            window.location = url
+        }
+    </script>
+</body>
+</html>
